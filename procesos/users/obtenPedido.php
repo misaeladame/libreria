@@ -1,0 +1,7 @@
+<?php 
+    require_once "../../clases/CrudBook.php";
+
+    $id=$_POST['id'];
+
+    echo json_encode(CrudUser::getPedido($id));
+?>

@@ -1,0 +1,16 @@
+#centrador{
+    position: relative;
+    width: 900;
+    height: 900;
+    background-color: red;
+  }
+  
+  #imagen{
+      position: absolute;
+      /* width: 100px; */
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+  }

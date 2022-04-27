@@ -1,0 +1,15 @@
+.bodyRegistro{
+    background: url(../imagenes/fondoRegistroUser.png) 
+    no-repeat fixed center center #333;
+    background-size: cover;
+}
+
+.anclasRegistro{
+    font-size: 12px;
+    color: #fff;
+}
+
+.anclasRegistro:hover {
+    color:rgb(206, 27, 27);
+  }
+
