@@ -59,6 +59,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <input type="hidden" name="admin" value="0">
                             <div class="d-flex justify-content-between">
                                 <button type="button" class="btn btn btn-danger" id="btnSignUpUser">Registrarme</button>      
                                 <a class="anclasRegistro" href="loginUsuario.php">Ingresar</a>
@@ -85,6 +86,8 @@
             let user = $('#user_name').val();
             let password = $('#password').val();
             let confirm_password = $('#confirm_password').val();
+            let admin = $('#admin').val();
+
 
             if(name=="" || last_name=="" || mail=="" || cellphone=="" || user=="" || password=="" || confirm_password==""){
                 return swal("Rellene todo los campos.", "Vuelva a intentarlo.", "error");
@@ -100,6 +103,7 @@
             formData.append('cellphone',cellphone);
             formData.append('user_name',user);
             formData.append('password',password);
+            formData.append('admin',password);
 
             $.ajax({
 				type:"POST",
@@ -110,9 +114,9 @@
 				success:function(res){
 					console.log('r', res);
 					if(res==1){
+                        swal("Se ha registrado con exito.", "", "success");
 						$('#frmNewUser')[0].reset();
-						swal("Se ha registrado con exito.", "", "success");
-                        setTimeout (redireccionar(), 5000);  
+                        setTimeout (redireccionar(), 000);  
                     }else {
                         swal("Error al registrarse.", "Intente de nuevo.", "error");
                     }

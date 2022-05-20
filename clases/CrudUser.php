@@ -75,7 +75,8 @@
                 $sql = "UPDATE users SET name =:name,
                                         last_name=:last_name,
                                         mail=:mail,
-                                        cellphone=:cellphone
+                                        cellphone=:cellphone,
+                                        isAdmin=:isAdmin
                                         -- user=:user
                         WHERE id=:id";
 
@@ -85,6 +86,7 @@
                 $query->bindParam(":last_name", $datos['last_name'], PDO::PARAM_STR);
                 $query->bindParam(":mail", $datos['mail'], PDO::PARAM_STR);
                 $query->bindParam(":cellphone", $datos['cellphone'], PDO::PARAM_INT);
+                $query->bindParam(":isAdmin", $datos['isAdmin'], PDO::PARAM_INT);
                 $query->bindParam(":id", $datos['id'], PDO::PARAM_INT);     
                 return $query->execute();
                 $query->close();

@@ -54,6 +54,7 @@
                     <input type="text" class="form-control input-sm" id="mailU" name="mailU">
                     <label for="">Teléfono</label>
                     <input type="text" class="form-control input-sm" id="cellphoneU" name="cellphoneU">
+                    <input type="hidden" name="adminU" value="0">
                 </form>
             </div>
             <div class="modal-footer">
@@ -120,11 +121,13 @@ $('#btnActualizar').click(function(){
         let last_name = $('#last_nameU').val();
         let mail = $('#mailU').val();
         let cellphone = $('#cellphoneU').val();
+        let admin = $('#adminU').val();
         
         formData.append('name',name);
         formData.append('last_name',last_name);
         formData.append('mail',mail);
         formData.append('cellphone',cellphone);  
+        formData.append('admin',admin); 
         formData.append('id',id);
 
         $.ajax({

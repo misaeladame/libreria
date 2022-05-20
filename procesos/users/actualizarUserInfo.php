@@ -5,6 +5,7 @@
                    'last_name' =>$_POST['last_name'],
                    'mail' =>$_POST['mail'],
                    'cellphone' =>$_POST['cellphone'],
+                   'isAdmin' =>$_POST['admin'],
                     'id' =>$_POST['id']);  
                                
     echo CrudUser::updateUserInfo($datos);
